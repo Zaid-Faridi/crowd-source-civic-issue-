@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NagarMitr | Report an Issue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-nav">
+        <div class="logo">
+          <span class="logo-icon">🗺️</span>
+          <div>
+            <p class="logo-title">NagarMitr</p>
+            <p class="logo-subtitle">Building Better Communities</p>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="dashboard.html">Dashboard</a>
+          <a class="nav-link" href="campaigns.html">Campaigns</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-button" aria-label="Search">
+            <span class="material-symbol">search</span>
+          </button>
+          <button class="icon-button" aria-label="Notifications">
+            <span class="material-symbol">notifications</span>
+            <span class="badge"></span>
+          </button>
+          <a class="icon-button" href="auth.html" aria-label="Profile">
+            <span class="material-symbol">person</span>
+          </a>
+          <a class="primary-btn pop-interactive" href="report.html">Report Issue</a>
+        </div>
+      </header>
+
+      <main class="page report-page">
+        <header class="report-header">
+          <h1>Report an Issue</h1>
+          <p>Help improve your community by reporting civic issues</p>
+          <div class="report-steps">
+            <div class="report-step" data-step="1">
+              <div class="report-step-circle">1</div>
+            </div>
+            <div class="report-step" data-step="2">
+              <div class="report-step-line"></div>
+              <div class="report-step-circle">2</div>
+            </div>
+            <div class="report-step" data-step="3">
+              <div class="report-step-line"></div>
+              <div class="report-step-circle">3</div>
+            </div>
+            <div class="report-step" data-step="4">
+              <div class="report-step-line"></div>
+              <div class="report-step-circle">4</div>
+            </div>
+          </div>
+        </header>
+
+        <!-- STEP 1 -->
+        <section class="report-card report-step-panel active" data-step-panel="1">
+          <h2>Select Issue Category</h2>
+          <div class="issue-category-grid">
+            <button class="issue-category-card pop-interactive" data-issue="Pothole">
+              <img src="https://img.icons8.com/color/96/000000/hole.png" alt="Pothole" />
+              <span>Pothole</span>
+            </button>
+            <button class="issue-category-card pop-interactive" data-issue="Garbage">
+              <img src="https://img.icons8.com/color/96/000000/waste.png" alt="Garbage" />
+              <span>Garbage</span>
+            </button>
+            <button class="issue-category-card pop-interactive" data-issue="Water Leak">
+              <img src="https://img.icons8.com/color/96/000000/water.png" alt="Water leak" />
+              <span>Water Leak</span>
+            </button>
+            <button class="issue-category-card pop-interactive" data-issue="Street Light">
+              <img src="https://img.icons8.com/color/96/000000/light-on.png" alt="Street light" />
+              <span>Street Light</span>
+            </button>
+            <button class="issue-category-card pop-interactive" data-issue="Tree/Plant">
+              <img src="https://img.icons8.com/color/96/000000/deciduous-tree.png" alt="Tree" />
+              <span>Tree/Plant</span>
+            </button>
+            <button class="issue-category-card pop-interactive" data-issue="Public Safety">
+              <img src="https://img.icons8.com/color/96/000000/alarm-light.png" alt="Public safety" />
+              <span>Public Safety</span>
+            </button>
+            <button class="issue-category-card pop-interactive" data-issue="Parking">
+              <img src="https://img.icons8.com/color/96/000000/parking.png" alt="Parking" />
+              <span>Parking</span>
+            </button>
+            <button class="issue-category-card pop-interactive" data-issue="Other">
+              <img src="https://img.icons8.com/color/96/000000/task.png" alt="Other" />
+              <span>Other</span>
+            </button>
+          </div>
+          <div class="report-actions">
+            <button class="secondary-btn" data-report-back disabled>Back</button>
+            <button class="primary-btn" data-report-next>Continue</button>
+          </div>
+        </section>
+
+        <!-- STEP 2 -->
+        <section class="report-card report-step-panel" data-step-panel="2">
+          <h2>Describe the Issue</h2>
+          <form class="report-form">
+            <label>
+              <span>Issue Title</span>
+              <input type="text" id="issueTitle" placeholder="Give a short title" />
+            </label>
+            <label>
+              <span>Description</span>
+              <textarea id="issueDescription" rows="5" placeholder="Describe the problem..."></textarea>
+            </label>
+            <div class="priority-section">
+              <p>Priority Level</p>
+              <div class="priority-grid">
+                <button class="priority-card pop-interactive" data-priority="Low">
+                  <span class="priority-title">Low</span>
+                  <span class="priority-sub">Minor inconvenience</span>
+                </button>
+                <button class="priority-card pop-interactive" data-priority="Medium">
+                  <span class="priority-title">Medium</span>
+                  <span class="priority-sub">Affects daily life</span>
+                </button>
+                <button class="priority-card pop-interactive" data-priority="High">
+                  <span class="priority-title">High</span>
+                  <span class="priority-sub">Safety concern</span>
+                </button>
+              </div>
+            </div>
+          </form>
+          <div class="report-actions">
+            <button class="secondary-btn" data-report-back>Back</button>
+            <button class="primary-btn" data-report-next>Continue</button>
+          </div>
+        </section>
+
+        <!-- STEP 3 -->
+        <section class="report-card report-step-panel" data-step-panel="3">
+          <h2>Add Location</h2>
+          <form class="report-form">
+            <label>
+              <span>Address or Location</span>
+              <input
+                type="text"
+                id="issueLocation"
+                placeholder="Enter address or use current location"
+              />
+            </label>
+          </form>
+          <button class="location-btn pop-interactive" id="useCurrentLocation">
+            <span class="material-symbol">my_location</span>
+            Use Current Location
+          </button>
+          <div class="location-map-placeholder">
+            <span class="material-symbol">location_on</span>
+            <p>Map preview will appear here</p>
+          </div>
+          <div class="report-actions">
+            <button class="secondary-btn" data-report-back>Back</button>
+            <button class="primary-btn" data-report-next>Continue</button>
+          </div>
+        </section>
+
+        <!-- STEP 4 -->
+        <section class="report-card report-step-panel" data-step-panel="4">
+          <h2>Add Photos (Optional)</h2>
+          <p class="report-subtitle">Upload up to 3 photos</p>
+          <div class="photo-upload-area">
+            <label for="issuePhotos" class="photo-drop pop-interactive">
+              <span class="material-symbol">file_upload</span>
+              <span>Upload</span>
+            </label>
+            <input type="file" id="issuePhotos" accept="image/*" multiple hidden />
+          </div>
+          <div class="photo-preview" id="photoPreview"></div>
+          <div class="report-tip">
+            <div class="report-tip-icon">
+              <span class="material-symbol">star</span>
+            </div>
+            <div>
+              <p class="report-tip-title">AI Smart Tip</p>
+              <p class="report-tip-text">
+                Photos help authorities understand the issue better. Include multiple angles if
+                possible.
+              </p>
+            </div>
+          </div>
+          <div class="report-actions">
+            <button class="secondary-btn" data-report-back>Back</button>
+            <button class="primary-btn" id="submitReportBtn">Submit Report</button>
+          </div>
+        </section>
+
+        <!-- CONFIRMATION -->
+        <section class="report-card report-step-panel" data-step-panel="5">
+          <h2>Report Submitted</h2>
+          <p class="report-confirm-text">
+            Your issue has been submitted to the respective department.
+          </p>
+          <p class="report-token">
+            Token ID:
+            <strong id="reportToken"></strong>
+          </p>
+          <div class="report-actions report-actions-center">
+            <a href="index.html" class="primary-btn pop-interactive">Back to Home</a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+

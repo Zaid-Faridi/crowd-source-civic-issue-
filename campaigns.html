@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NagarMitr Campaigns</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-nav">
+        <div class="logo">
+          <span class="logo-icon">🗺️</span>
+          <div>
+            <p class="logo-title">NagarMitr</p>
+            <p class="logo-subtitle">Building Better Communities</p>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="dashboard.html">Dashboard</a>
+          <a class="nav-link active" href="campaigns.html">Campaigns</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-button" aria-label="Search">
+            <span class="material-symbol">search</span>
+          </button>
+          <button class="icon-button" aria-label="Notifications">
+            <span class="material-symbol">notifications</span>
+            <span class="badge"></span>
+          </button>
+          <a class="icon-button" href="auth.html" aria-label="Profile">
+            <span class="material-symbol">person</span>
+          </a>
+          <a class="primary-btn pop-interactive" href="report.html">Report Issue</a>
+        </div>
+      </header>
+
+      <main class="page">
+        <section class="campaigns-hero pop-interactive">
+          <div>
+            <span class="tag tag--gold">Featured Campaign</span>
+            <h2>Clean Up Central Park</h2>
+            <p>
+              Join us for our biggest community event! Help restore Central Park to its natural beauty.
+            </p>
+            <div class="campaign-hero-meta">
+              <span><span class="material-symbol">group</span>67 participants</span>
+              <span><span class="material-symbol">event</span>Feb 15, 2024</span>
+              <span><span class="material-symbol">location_on</span>Central Park, NYC</span>
+            </div>
+          </div>
+          <button class="primary-btn pop-interactive" data-open-modal>Join Campaign</button>
+        </section>
+
+        <section class="active-campaigns">
+          <div class="section-header">
+            <div>
+              <p class="section-kicker">Active Campaigns</p>
+              <p class="section-subtext">Join forces to create real change</p>
+            </div>
+            <button class="ghost-button pop-interactive">
+              <span class="material-symbol">add</span>
+              Create Campaign
+            </button>
+          </div>
+          <div class="campaign-grid">
+            <article class="campaign-card pop-interactive" data-open-modal>
+              <div class="campaign-card__tag tag tag--forest">Environment</div>
+              <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80" alt="Clean up" />
+              <div class="campaign-card__body">
+                <h3>Clean Up Central Park</h3>
+                <p>Join us for a community cleanup event to make our park beautiful again</p>
+                <div class="progress-bar">
+                  <div style="width: 67%"></div>
+                </div>
+                <div class="campaign-card__meta">
+                  <span><span class="material-symbol">groups</span>67</span>
+                  <span><span class="material-symbol">percent</span>67 / 100</span>
+                  <span><span class="material-symbol">event</span>2/15/2024</span>
+                </div>
+              </div>
+            </article>
+            <article class="campaign-card pop-interactive" data-open-modal>
+              <div class="campaign-card__tag tag tag--indigo">Infrastructure</div>
+              <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=800&q=80" alt="Streets" />
+              <div class="campaign-card__body">
+                <h3>Fix Our Streets Initiative</h3>
+                <p>Campaign for road repairs and better infrastructure in our neighborhood</p>
+                <div class="progress-bar">
+                  <div style="width: 68%"></div>
+                </div>
+                <div class="campaign-card__meta">
+                  <span><span class="material-symbol">groups</span>342</span>
+                  <span><span class="material-symbol">percent</span>342 / 500</span>
+                  <span><span class="material-symbol">event</span>2/28/2024</span>
+                </div>
+              </div>
+            </article>
+            <article class="campaign-card pop-interactive" data-open-modal>
+              <div class="campaign-card__tag tag tag--orange">Community</div>
+              <img src="https://images.unsplash.com/photo-1497493292307-31c376b6e479?auto=format&fit=crop&w=800&q=80" alt="Garden" />
+              <div class="campaign-card__body">
+                <h3>Community Garden Project</h3>
+                <p>Transform vacant lot into a community garden space</p>
+                <div class="progress-bar">
+                  <div style="width: 56%"></div>
+                </div>
+                <div class="campaign-card__meta">
+                  <span><span class="material-symbol">groups</span>28</span>
+                  <span><span class="material-symbol">percent</span>28 / 50</span>
+                  <span><span class="material-symbol">event</span>3/1/2024</span>
+                </div>
+              </div>
+            </article>
+            <article class="campaign-card pop-interactive" data-open-modal>
+              <div class="campaign-card__tag tag tag--slate">Safety</div>
+              <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=800&q=80" alt="Lighting" />
+              <div class="campaign-card__body">
+                <h3>Better Street Lighting</h3>
+                <p>Campaign for improved lighting in poorly lit areas for safety</p>
+                <div class="progress-bar">
+                  <div style="width: 72%"></div>
+                </div>
+                <div class="campaign-card__meta">
+                  <span><span class="material-symbol">groups</span>145</span>
+                  <span><span class="material-symbol">percent</span>145 / 200</span>
+                  <span><span class="material-symbol">event</span>2/20/2024</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="campaign-modal" data-modal>
+      <div class="campaign-modal__content pop-interactive">
+        <button class="modal-close" aria-label="Close" data-close-modal>
+          <span class="material-symbol">close</span>
+        </button>
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80" alt="Modal" />
+        <div class="modal-body">
+          <span class="tag tag--forest">Environment</span>
+          <h3>Clean Up Central Park</h3>
+          <p>Join us for a community cleanup event to make our park beautiful again.</p>
+          <div class="modal-stats">
+            <div>
+              <p>Participants</p>
+              <strong>67</strong>
+            </div>
+            <div>
+              <p>Goal</p>
+              <strong>100</strong>
+            </div>
+            <div>
+              <p>End Date</p>
+              <strong>Feb 15</strong>
+            </div>
+          </div>
+          <div class="progress-label">
+            <p>Campaign Progress</p>
+            <span>67%</span>
+          </div>
+          <div class="progress-bar">
+            <div style="width: 67%"></div>
+          </div>
+          <div class="modal-location">
+            <span class="material-symbol">location_on</span>
+            Central Park, NYC
+          </div>
+          <div class="modal-actions">
+            <button class="primary-btn pop-interactive">Join Campaign</button>
+            <button class="ghost-button pop-interactive">Share</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="floating-btn">+</button>
+    <button class="help-btn">?</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

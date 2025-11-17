@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NagarMitr Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-nav">
+        <div class="logo">
+          <span class="logo-icon">🗺️</span>
+          <div>
+            <p class="logo-title">NagarMitr</p>
+            <p class="logo-subtitle">Building Better Communities</p>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link active" href="dashboard.html">Dashboard</a>
+          <a class="nav-link" href="campaigns.html">Campaigns</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-button" aria-label="Search">
+            <span class="material-symbol">search</span>
+          </button>
+          <button class="icon-button" aria-label="Notifications">
+            <span class="material-symbol">notifications</span>
+            <span class="badge"></span>
+          </button>
+          <a class="icon-button" href="auth.html" aria-label="Profile">
+            <span class="material-symbol">person</span>
+          </a>
+          <a class="primary-btn pop-interactive" href="report.html">Report Issue</a>
+        </div>
+      </header>
+
+      <main class="page">
+        <section class="dashboard-hero">
+          <h1>My Dashboard</h1>
+          <p>Track and manage your reported issues</p>
+        </section>
+
+        <section class="dashboard-stats">
+          <article class="summary-card pop-interactive">
+            <div class="summary-icon summary-icon--purple">
+              <span class="material-symbol">bar_chart</span>
+            </div>
+            <div>
+              <p class="summary-value">3</p>
+              <p class="summary-label">Total Reports</p>
+            </div>
+          </article>
+          <article class="summary-card pop-interactive">
+            <div class="summary-icon summary-icon--orange">
+              <span class="material-symbol">schedule</span>
+            </div>
+            <div>
+              <p class="summary-value">1</p>
+              <p class="summary-label">Pending</p>
+            </div>
+          </article>
+          <article class="summary-card pop-interactive">
+            <div class="summary-icon summary-icon--blue">
+              <span class="material-symbol">info</span>
+            </div>
+            <div>
+              <p class="summary-value">1</p>
+              <p class="summary-label">In Progress</p>
+            </div>
+          </article>
+          <article class="summary-card pop-interactive">
+            <div class="summary-icon summary-icon--green">
+              <span class="material-symbol">task_alt</span>
+            </div>
+            <div>
+              <p class="summary-value">1</p>
+              <p class="summary-label">Resolved</p>
+            </div>
+          </article>
+        </section>
+
+        <div class="dashboard-controls">
+          <div class="search-input pop-interactive">
+            <span class="material-symbol">search</span>
+            <input type="text" placeholder="Search your reports..." />
+          </div>
+          <button class="filter-button pop-interactive">
+            <span class="material-symbol">tune</span>
+            All Status
+            <span class="material-symbol">expand_more</span>
+          </button>
+        </div>
+
+        <div class="dashboard-tabs">
+          <button class="tab-button active pop-interactive">My Reports</button>
+          <button class="tab-button pop-interactive">Nearby Issues</button>
+          <button class="tab-button pop-interactive">Following</button>
+        </div>
+
+        <section class="issue-list">
+          <article class="issue-row pop-interactive">
+            <div class="issue-row-tags">
+              <span class="tag tag--gray">Pothole</span>
+              <span class="tag tag--blue">In Progress</span>
+              <span class="tag tag--pink">High Priority</span>
+            </div>
+            <h3>Large pothole on Main Street</h3>
+            <p>Dangerous pothole causing traffic issues</p>
+            <div class="issue-row-meta">
+              <span><span class="material-symbol">location_on</span>123 Main St, New York, NY</span>
+              <span><span class="material-symbol">event</span>1/15/2024</span>
+            </div>
+            <div class="issue-row-stats">
+              <span><span class="material-symbol">whatshot</span>234</span>
+              <span><span class="material-symbol">chat</span>45</span>
+              <button class="text-link">View Details</button>
+            </div>
+          </article>
+
+          <article class="issue-row pop-interactive">
+            <div class="issue-row-tags">
+              <span class="tag tag--purple">Streetlight</span>
+              <span class="tag tag--amber">Pending</span>
+            </div>
+            <h3>Broken street light near park</h3>
+            <p>Safety concern at night</p>
+            <div class="issue-row-meta">
+              <span><span class="material-symbol">location_on</span>456 Park Ave, New York, NY</span>
+              <span><span class="material-symbol">event</span>1/16/2024</span>
+            </div>
+            <div class="issue-row-stats">
+              <span><span class="material-symbol">whatshot</span>89</span>
+              <span><span class="material-symbol">chat</span>12</span>
+              <button class="text-link">View Details</button>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <button class="floating-btn">+</button>
+    <button class="help-btn">?</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

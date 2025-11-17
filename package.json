@@ -1,0 +1,21 @@
+{
+  "name": "crowd-source-civic-issue",
+  "version": "1.0.0",
+  "description": "Frontend project for reporting civic issues with Firebase authentication.",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=5500",
+    "dev": "live-server --port=5500"
+  },
+  "keywords": [
+    "civic",
+    "frontend",
+    "firebase",
+    "web-app"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
