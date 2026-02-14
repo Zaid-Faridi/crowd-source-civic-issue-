@@ -37,7 +37,7 @@ body {
 .app-shell {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 32px 24px 120px;
+  padding: 120px 24px 120px;
 }
 
 .top-nav {
@@ -48,8 +48,13 @@ body {
   border-radius: 20px;
   padding: 16px 24px;
   box-shadow: 0 20px 60px rgba(97, 55, 218, 0.1);
-  position: sticky;
+  position: fixed;
   top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 1152px;
+  z-index: 1000;
   backdrop-filter: blur(14px);
 }
 
@@ -1763,5 +1768,3 @@ body {
     justify-content: center;
   }
 }
-
-
