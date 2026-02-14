@@ -148,6 +148,8 @@ issueCards.forEach((card) => {
   card.addEventListener("click", () => {
     issueCards.forEach((c) => c.classList.remove("selected"));
     card.classList.add("selected");
+    // Auto-advance to Step 2
+    setTimeout(() => setReportStep(2), 300);
   });
 });
 
@@ -253,13 +255,18 @@ submitReportBtn?.addEventListener("click", async () => {
     console.log("Issue Report ID: ", docRef.id);
 
     // 4. Show Success
-    const token = `NM-${docRef.id.substring(0, 6).toUpperCase()}-${Math.floor(Math.random() * 999).toString().padStart(3, "0")}`;
+    // Generate a user-friendly token: NM + last 6 chars of docID + random 3 digits
+    const shortId = docRef.id.slice(-6).toUpperCase();
+    const randomPart = Math.floor(Math.random() * 999).toString().padStart(3, "0");
+    const token = `NM-${shortId}-${randomPart}`;
+
     if (reportTokenEl) {
       reportTokenEl.textContent = token;
     }
+
+    // Advance to Confirmation Step
     setReportStep(5);
 
-    // Optional: Reset form or store recent report locally
   } catch (error) {
     console.error("Error adding document: ", error);
     alert("Failed to submit report. Please try again.");
