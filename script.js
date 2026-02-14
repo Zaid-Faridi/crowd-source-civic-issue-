@@ -205,16 +205,65 @@ issuePhotosInput?.addEventListener("change", () => {
 const submitReportBtn = document.getElementById("submitReportBtn");
 const reportTokenEl = document.getElementById("reportToken");
 
-submitReportBtn?.addEventListener("click", () => {
-  const token = `NM-${Date.now().toString(36).toUpperCase()}-${Math.floor(
-    Math.random() * 999
-  )
-    .toString()
-    .padStart(3, "0")}`;
-  if (reportTokenEl) {
-    reportTokenEl.textContent = token;
+submitReportBtn?.addEventListener("click", async () => {
+  // 1. Collect Data
+  const category = document.querySelector(".issue-category-card.selected")?.dataset.issue || "Other";
+  const priority = document.querySelector(".priority-card.selected")?.dataset.priority || "Medium";
+  const title = document.getElementById("issueTitle")?.value || "Untitled Issue";
+  const description = document.getElementById("issueDescription")?.value || "";
+  const location = document.getElementById("issueLocation")?.value || "";
+
+  // Extract mock lat/lng if available from the location string or default to New Delhi
+  let lat = 28.6139;
+  let lng = 77.2090;
+
+  if (location.includes("Current location:")) {
+    const parts = location.split(":")[1].split(",");
+    if (parts.length === 2) {
+      lat = parseFloat(parts[0]);
+      lng = parseFloat(parts[1]);
+    }
   }
-  setReportStep(5);
+
+  // User Info (from localStorage)
+  const user = JSON.parse(localStorage.getItem("nagarMitrUser") || "{}");
+  const userId = user.email || "anonymous_" + Date.now();
+  const userName = user.name || "Anonymous";
+
+  // 2. Prepare Object
+  const newIssue = {
+    category,
+    priority,
+    title,
+    description,
+    location,
+    lat,
+    lng,
+    status: "Pending",
+    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    userId,
+    userName,
+    upvotes: 0,
+    comments: 0
+  };
+
+  try {
+    // 3. Save to Firestore
+    const docRef = await window._FM.firestore.collection("issues").add(newIssue);
+    console.log("Issue Report ID: ", docRef.id);
+
+    // 4. Show Success
+    const token = `NM-${docRef.id.substring(0, 6).toUpperCase()}-${Math.floor(Math.random() * 999).toString().padStart(3, "0")}`;
+    if (reportTokenEl) {
+      reportTokenEl.textContent = token;
+    }
+    setReportStep(5);
+
+    // Optional: Reset form or store recent report locally
+  } catch (error) {
+    console.error("Error adding document: ", error);
+    alert("Failed to submit report. Please try again.");
+  }
 });
 
 
